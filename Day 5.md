@@ -302,4 +302,4 @@ SELECT ROUND(123.4567,2)
 SELECT CEILING(9.5)
 SELECT FLOOR(9.5)
 ```
-![alt text](<Screenshot 2024-04-26 172315.png>)
+![alt text](./Images/Screenshot%202024-04-26%20172315.png)

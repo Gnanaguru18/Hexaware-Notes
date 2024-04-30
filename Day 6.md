@@ -98,7 +98,8 @@ ORDER BY purch_amt DESC
 OFFSET 0 ROWS
 FETCH NEXT 3 ROWS ONLY;  
 ```
-![Link for Microsoft DOCS](https://learn.microsoft.com/en-us/sql/t-sql/functions/format-transact-sql?view=sql-server-ver16)
+## Link for Microsoft DOCS
+https://learn.microsoft.com/en-us/sql/t-sql/functions/format-transact-sql?view=sql-server-ver16
 
 ### Task 2: Format Date - 25 Apr 2012
 -- Clue: String Functions - Fromat
@@ -225,7 +226,7 @@ SELECT productname FROM Products where ProductID in (select ProductID from Order
     - Unique 
     - Not NULL
     
-    ![alt text](<Screenshot 2024-04-29 141059.png>)
+    ![alt text](./Images/Screenshot%202024-04-29%20141059.png)
 ## ACID PRINCIPLE
 A - Atomicity  
 C - Consistency  

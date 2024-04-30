@@ -137,7 +137,7 @@ where purch_amt < (select min(purch_amt)
     - `ON DELETE CASCADE` is used to delete all the values related to that foreign key
 - `[ ]` is used to get column names so that we can include   
 - Required arrow indications
-![alt text](<Screenshot 2024-04-30 183827.png>)
+![alt text](./Images/Screenshot%202024-04-30%20183827.png)
 
 # Inbuilt Functions
 - String function
@@ -163,4 +163,4 @@ select DATEADD(YEAR,1,GETDATE())
 
 SELECT DATEDIFF(DAY, '2024-04-01','2024-04-05')
 ```
-![alt text](<Screenshot 2024-04-26 172729.png>)
+![alt text](./Images/Screenshot%202024-04-26%20172729.png)

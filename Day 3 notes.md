@@ -89,7 +89,7 @@ SELECT * FROM movies where year in(1995,2007,2010);
 ```
 <br/><br/>
 ## Session 3
-![alt text](<Screenshot 2024-04-24 125250.png>)
+![alt text](./Images/Screenshot%202024-04-24%20125250.png)
 
 `%` will accept even there's no character before or after.  
 Ex: Attention is considered when `%At%` is used
