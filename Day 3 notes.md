@@ -34,8 +34,9 @@ They can scale up or down based on the requirement
 6. Performance
 
 ***
-<br/><br/>
-## NoSQL
+<br/>
+
+# NoSQL
 Data are represented as graphs
 - Ex: MongoDB, Redis, cassandra
 <br/><br/>
@@ -88,8 +89,7 @@ SELECT * FROM movies where year in(1995,2007,2010);
 ```
 <br/><br/>
 ## Session 3
-
-![](Screenshot 2024-04-24 125250.png)
+![alt text](<Screenshot 2024-04-24 125250.png>)
 
 `%` will accept even there's no character before or after.  
 Ex: Attention is considered when `%At%` is used
@@ -150,32 +150,36 @@ WHERE condition(s)
 ORDER BY column ASC/DESC
 LIMIT num_limit OFFSET num_offset;
 ```
-#### 2.
+#### 2. Order all the cities in the United States by their latitude from north to south
+```sql
 SELECT * FROM north_american_cities
 where Country like "United States"
 order by latitude desc
 ;
-
-#### 3.
+```
+#### 3. List all the cities west of Chicago, ordered from west to east
+```sql
 SELECT * FROM north_american_cities
 where longitude <-87.629798
 order by longitude
 ;
-
-#### 4. 
+```
+#### 4. List the two largest cities in Mexico (by population)
+```sql
 SELECT * FROM north_american_cities
 where country like "Mexico"
 order by Population desc
 limit 2
 ;
-
-#### 5. 
+```
+#### 5. List the third and fourth largest cities (by population) in the United States and their population
+```sql
 SELECT * FROM north_american_cities
 where country like "United states"
 order by Population desc
 limit 2 offset 2
 ;
-
+```
 <br>
 
 # Normalisation
@@ -198,26 +202,31 @@ WHERE condition(s)
 ORDER BY column, … ASC/DESC
 LIMIT num_limit OFFSET num_offset;
 ```
-#### 1.
+#### 1. Find the domestic and international sales for each movie
+```sql
 SELECT *
 FROM movies inner join boxoffice
 on id = movie_id
 ;
+```
 
-#### 2.
+#### 2. Show the sales numbers for each movie that did better internationally rather than domestically
+```sql
 SELECT *
 FROM movies inner join boxoffice
 on id = movie_id
 where international_sales>domestic_sales
 ;
+```
+#### 3. List all the movies by their ratings in descending order
 
-#### 3.
+```sql
 SELECT *
 FROM movies inner join boxoffice
 on id = movie_id
 order by rating desc
 ;
-
+```
 ## Session 7
 ## Outer Joins
 
@@ -286,7 +295,6 @@ where year%2 = 0;
 
 #### 2. For each role, find the average number of years employed by employees in that role
 ```sql
-[11:29 AM] Ujjwal R Sanagapati (Unverified)
 SELECT Role, avg(years_employed) FROM employees
 GROUP BY Role;
 ```
@@ -336,13 +344,10 @@ on id=movie_id
 group by director;
 ```
 
-## Session 13
-
-#### 1. 
 
 ## Session 14
 
-#### 1. 
+#### 1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
 ```sql
 update movies
 set director="John Lasseter"
@@ -437,10 +442,7 @@ group by city
 having count(city)=1;
 ```
 #### Task 3: Determine the maximum commission in each city, and list the salesmen who earn this commission  (Clue: Join\)
-```sql
 
-
-```
 - #### 3.1 :  Write a query to display all the orders from the orders table issued by the salesman 'Paul Adam'.
 
     - ```sql
@@ -452,7 +454,7 @@ having count(city)=1;
 
 - #### 3.2 : Write a query to display all the orders which values are greater than the average order value for 10th October 2012
 
-    - ```sql
+ 
 
 - #### 3.2.1 : Find the average order value for 10th October 2012
 
@@ -463,8 +465,7 @@ having count(city)=1;
         ```
 
 
-Task 6
--- Write a query to find all orders with order amounts which are above-average amounts for their customers.
+### Task 6: Write a query to find all orders with order amounts which are above-average amounts for their customers.
 ```sql
 select * from orders o
 where purch_amt>(select avg(purch_amt)
