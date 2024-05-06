@@ -143,7 +143,7 @@ else:
   print("No, we ran out of stock")
 ```
 ## IN Operator
-- It is a membership operator
+- It is a `membership operator`
 - Used to find a substring within a string
 - Ex: 
 ```py
