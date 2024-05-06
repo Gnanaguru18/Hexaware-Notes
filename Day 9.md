@@ -164,3 +164,118 @@ print(avatar)     # ['fire', 'Diamond', 'platinum', 'gold', 'air']
 ```
 
 # LOOPS
+## While Loop
+```py
+while(condition):
+    expression
+```
+To print 5 numbers
+```py 
+countdown=1
+while countdown<6:
+    print(countdown)
+    countdown+=1
+```
+### Task: Print * pattern
+```py
+count=1
+n=int(input("Enter number"))
+while count<n+1:
+    print("✨"*count)
+    count+=1
+```
+
+## For Loop
+```py
+range(<start>,<stop>,<skip>)
+
+for i in range():
+    experssion
+```
+### Task : print * pattern
+```py
+n=int(input())
+for i in range(1,n+1):
+    print("✨"*i)
+```
+
+### Task : Double up each element in an array
+```py
+stats=[10,20,30]
+for i in range(len(stats)):
+    stats[i]*=2
+print(stats)
+```
+To do it without changing the actual array
+```py
+stats=[10,20,30]
+new_stats=[]
+for i in range(len(stats)):
+    new_stats.append(stats[i]*2)
+print(stats)
+print(new_stats)
+```
+
+To access the value without using index
+```py
+player_stats=[10,20,30]
+new_stats=[]
+for stat in player_stats:
+    new_stats.append(stat*2)
+print(player_stat)
+print(new_stats)
+```
+
+# List Comprehenshion - copy of the result
+![](./Images/list%20comprehension.png)
+```py
+powered_stat = [stat * 2 for stat in player_stats]  # Double the stat for each stat in stats
+print(powered_stat)
+print(player_stats)
+```
+### Task 4: 
+    avengers = [
+    "Hulk",
+    "Iron man",
+    "Black widow",
+    "Captain america",
+    "Spider man",
+    "Thor"]   
+    Output : [4, 8, 11, 15, 10, 4]
+ 
+ ### Task 4.1 - for loop
+ ```py
+ length=[]
+for avenger in avengers:
+    length.append(len(avenger))
+print(length)
+```
+
+### # Task 4.2 - List comprehension
+```py
+length=[len(avenger) for avenger in avengers]
+
+# To display only 15 and 11
+new_length=[count for count in length if count>10]
+```
+### Task: 5  Find avengers who have more than 10 characters
+Output: ["Black widow","Captain america"]
+### Task: 5.1  with for loop
+```py
+big_name=[]
+for avenger in avengers:
+    if len(avenger)>10:
+        big_name.append(avenger)
+print(big_name)
+```
+
+### Task: 5.2   with list comprehension
+```py
+big_name1=[avenger for avenger in avengers if len(avenger)>10 ]
+print(big_name1)
+```
+If we need to UPPER CASE all the characters 
+```py
+big_name1=[avenger.upper() for avenger in avengers if len(avenger)>10 ]
+print(big_name1)
+```
