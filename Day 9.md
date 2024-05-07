@@ -400,4 +400,19 @@ for color in colors:
     unique_color.add(color)
 print(unique_color)
 ```
+## Update 
+Adds all the elements in the second set
 
+```py
+all_tech_gadgets={"remote","time machine"}
+new_tech={"charge","watch"}
+
+all_tech_gadgets.update(new_tech)
+
+print(all_tech_gadgets)
+```
+## Discard
+Even if the element to be discarded is not present it doesn't error out
+```py
+all_tech_gadgets.discard("remote")
+```
