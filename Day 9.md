@@ -279,3 +279,125 @@ If we need to UPPER CASE all the characters
 big_name1=[avenger.upper() for avenger in avengers if len(avenger)>10 ]
 print(big_name1)
 ```
+
+# Dictionary
+```py
+#Dictionary
+person={
+    "name": "Lionel Messi",
+    "age":36,
+    "country":"Argentina",
+    "Sport":"Football"
+}
+
+# Access value
+print(person["name"])
+print(person["age"])
+
+print(type(person))
+
+# Update value
+person["age"]+=1
+
+# Methods
+print(person.keys())
+print(person.values())
+
+```
+### Task:
+```py
+books = [
+    {
+        "title": "Infinite Jest",
+        "rating": 4.5,
+        "genre": "Fiction"
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "rating": 3.9,
+        "genre": "Fiction"
+    },
+    {
+        "title": "Sapiens",
+        "rating": 4.9,
+        "genre": "History"
+    },
+    {
+        "title": "A Brief History of Time",
+        "rating": 4.8,
+        "genre": "Science"
+    },
+    {
+        "title": "Clean Code",
+        "rating": 4.7,
+        "genre": "Technology"
+    },
+]
+```
+
+### Task 1: Highly rated books | 4.7 or more   (for loop)
+```py
+hi_books=[]
+for book in books:
+    if book["rating"]>=4.7:
+        hi_books.append(book["title"])
+print(hi_books)
+```
+### Task 2: with list comprehension
+```py
+hii_books=[book["title"] for book in books if book["rating"]>=4.7]
+print(hii_books)
+```
+# TUPLE
+- They are `immutable`
+- They only use `index` no `find`
+```py
+person=("Sakura","leaf village",20,20)
+
+print(person[0],person[1])
+
+# person[0]="Sneha"   ❌      can't change value
+
+# Modification is not allowed
+# like remove(),pop(),append(),insert()
+
+## Allowed function
+print(person.count(20))
+print(person.index("Sakura"))
+```
+
+
+## index vs find
+- Index points out error if not found
+- Find returns `-1` when not found
+
+# SETS
+1. Mutable
+2. Unique
+3. No order(cannot access with index)   
+
+```py
+empty_dict={}                # empty dictionary
+tech_gad={"smartphone","laptop","smartwatch"}
+empty_set=set()
+
+print(type(tech_gad))            # <class 'set'>
+print(type(empty_set))             # <class 'set'>
+
+print(tech_gad)
+```
+Methods
+```py
+tech_gad.add("Omiscient reader")
+tech_gad.add("laptop")       # when we add an already existing element it doesn't add it again
+```
+
+### Task : Find unique colors
+colors=["red","blue","red","green","pink","blue"]
+```py
+unique_color=set()
+for color in colors:
+    unique_color.add(color)
+print(unique_color)
+```
+
