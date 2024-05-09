@@ -220,11 +220,13 @@ def calc_age(birth_year):
     try:        
         age = datetime.now().year - int(birth_year)
         if int(birth_year)>datetime.now().year:
-            raise Exception("Are you from Future?")
+            raise Exception("Are you from Future?👨‍🚀")
+        elif int(birth_year)<0:
+            raise Exception("Too old to exist")
         return f"Your age is {age}"
         
     except ValueError:
-        return f"Give year in numbers"
+        return f"Give year in numbers 🔢"
     
     except Exception as e:
         return f"Check again {e}"
